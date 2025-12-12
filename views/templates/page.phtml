@@ -1,0 +1,78 @@
+<?php
+
+namespace Configurator\Gui\Views\Templates;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
+
+<div class="wrap">
+	<h1 class="wp-heading-inline"><?= esc_html_e( $title ); ?></h1>
+	<div class="tablenav">
+		<div class="alignleft">
+			<input type="search" id="filter" placeholder="Filter...">
+		</div>
+		<div class="alignright">
+			<input type="submit" id="download" class="button-primary" value="Download CSV">
+		</div>
+	</div>
+	<table id="<?= esc_attr( $id ); ?>" class="widefat striped fixed">
+		<thead>
+			<?php foreach( $table['head'] as $row ) : ?>
+			<tr>
+				<?php foreach( $row as $key => $value ) : ?>
+				<th class="<?= esc_attr( str_replace( ' ', '-', strtolower( $key ) ) ); ?> sortable">
+					<a>
+						<span class="value"><?= esc_html( $key ); ?></span>
+						<span class="sorting-indicators">
+							<span class="sorting-indicator asc"></span>
+							<span class="sorting-indicator desc"></span>
+						</span>
+					</a>
+				</th>
+				<?php endforeach; ?>
+			</tr>
+			<?php endforeach; ?>
+		</thead>
+		<tbody>
+			<tr class="no-results hidden">
+				<td colspan="10">
+					<span class="value">No results found.</span>
+				</td>
+			</tr>
+			<?php foreach ( $table['body'] as $row ) : ?>
+			<tr>
+				<?php foreach( $row as $key => $value ) : ?>
+				<td class="<?= esc_attr( str_replace( ' ', '-', strtolower( $key ) ) ); ?>">
+					<?php if ( ! $value ) : ?>
+						<span class="value">—</span>
+					<?php elseif ( 'Enabled' === $key ) : ?>
+						<span class="status"><?= esc_html( $value ); ?></span>
+						<?php if ( 'true' === $value ) : ?>
+							<span class="value">🟢</span>
+						<?php else : ?>
+							<span class="value">🔴</span>
+						<?php endif; ?>
+					<?php elseif ( 'URI' === $key ) : ?>
+						<a class="tooltip" href="<?= esc_url( $value ); ?>" target="_blank">
+							<span class="tiptext"><?= esc_url( $value ); ?></span>
+							<span class="value">Link</span>
+						</a>
+					<?php else : ?>
+						<span class="value"><?= esc_html( $value ); ?></span>
+					<?php endif; ?>
+				</td>
+				<?php endforeach; ?>
+			</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	<div class="seek">
+		<a class="previous">❮</a>
+		<a class="next">❯</a>
+	</div>
+	<div class="clear"></div>
+</div>
+<!-- .wrap -->
