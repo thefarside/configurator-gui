@@ -6,8 +6,8 @@ If nothing else it showcases using an MVP project as a Configurator module and c
 
 Anyway...
 ## Requirements
- + PHP 8.4
- + Wordpress 6.9
+ + PHP 8.5.1
+ + Wordpress 6.9.1
  + [wp-list-table 1.0](https://github.com/thefarside/wp-list-table/tree/main/)
  + [Configurator 2.0](https://github.com/thefarside/configurator/tree/main/) 
 

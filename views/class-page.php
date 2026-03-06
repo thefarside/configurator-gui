@@ -4,8 +4,8 @@
  * Module URI: https://github.com/thefarside/configurator-gui/tree/main/views/class-page.php
  * Version: 0.0.1
  * Description: Renders Configurator GUI template.
- * Requires at least: 6.9
- * Requires PHP: 8.4.11
+ * Requires at least: 6.9.1
+ * Requires PHP: 8.5.1
  * Requires Modules: Configurator\Gui\Views\Template\Page
  */
 

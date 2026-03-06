@@ -4,8 +4,8 @@
  * Module URI: https://github.com/thefarside/configurator-gui/tree/main/class-router.php
  * Version: 0.0.1
  * Description: A graphical user interface for the Configurator plugin that shows module load status and header information.
- * Requires at least: 6.9
- * Requires PHP: 8.4.11
+ * Requires at least: 6.9.1
+ * Requires PHP: 8.5.1
  * Requires Modules: Configurator\Gui\Presenters\Page, Configurator\Gui\Models\Page, Configurator\Gui\Views\Page
  */
 
