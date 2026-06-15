@@ -4,7 +4,7 @@
  * Module URI: https://github.com/thefarside/configurator-gui/tree/main/models/class-page.php
  * Version: 0.0.1
  * Description: Fetches Configurator GUI data.
- * Requires at least: 6.9.1
+ * Requires at least: 7.0
  * Requires PHP: 8.5.1
  * Requires Modules: Configurator\Load
  */

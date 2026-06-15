@@ -7,9 +7,9 @@ If nothing else it showcases using an MVP project as a Configurator module and c
 Anyway...
 ## Requirements
  + PHP 8.5.1
- + Wordpress 6.9.1
+ + Wordpress 7.0
  + [wp-list-table 1.0](https://github.com/thefarside/wp-list-table/tree/main/)
- + [Configurator 2.0](https://github.com/thefarside/configurator/tree/main/) 
+ + [Configurator 2.1](https://github.com/thefarside/configurator/tree/main/) 
 
 ## Installation
 All you have to do is unzip this project as "gui" into the Configurator plugin base and add the wp-list-table assets to it.
